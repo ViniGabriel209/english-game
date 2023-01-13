@@ -1,14 +1,5 @@
-import pymysql.cursors
 import random as rd
-
-conexao = pymysql.connect(
-    host = 'localhost',
-    user = 'root',
-    password = '209213',
-    db = 'english',
-    charset = 'utf8mb4',
-    cursorclass = pymysql.cursors.DictCursor
-)
+from verbs import verbs
 
 class bcolors:
     HEADER = '\033[95m'
@@ -37,7 +28,7 @@ def verbsConjugation():
 
         verb = verbDictionary['verb']
         pastSimple = verbDictionary['pastSimple']
-        pastParticiple = verbDictionary['partParticiple']
+        pastParticiple = verbDictionary['pastParticiple']
         meaning = verbDictionary['meaning']
 
         if question == 1:
@@ -115,7 +106,7 @@ def verbsConjugation():
                 i += 1
             else:
                 print(f'{bcolors.FAIL}WRONG!')
-                print(f'{bcolors.ENDC}The verb is {verb}')
+                print(f'{bcolors.ENDC}The past simple is {pastSimple}')
                 i = 0
 
         if question == 5:
@@ -133,7 +124,7 @@ def verbsConjugation():
                 i += 1
             else:
                 print(f'{bcolors.FAIL}WRONG!')
-                print(f'{bcolors.ENDC}The verb is {verb}')
+                print(f'{bcolors.ENDC}The past participle is {pastParticiple}')
                 i = 0
 
         print(f'{bcolors.ENDC}|'+f'{bcolors.OKGREEN}#'*i+f'{bcolors.ENDC}#'*(50-i)+'|')
@@ -142,14 +133,6 @@ def verbsConjugation():
 
         if i == 50:
             print(f'{bcolors.OKCYAN}CONGRATULATIONS! YOU WON THE GAME!')
-
-
-try:                                                   # ----- LISTA DE VERBOS
-    with conexao.cursor() as cursor:
-        cursor.execute('select * from verbs;')
-        verbs = cursor.fetchall()
-except:
-    print('Erro ao conectar ao banco de dados dos pedidos')
 
 
 verbsConjugation()
