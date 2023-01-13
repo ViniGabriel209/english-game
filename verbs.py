@@ -9,7 +9,7 @@ verbs = [
 {'idverb' : 8,  'verb' : 'blow',   'pastSimple' : 'blew',	   'pastParticiple' : 'blown',   'meaning' : 'soprar [há outros significados]'},
 {'idverb' : 9,  'verb' : 'break',  'pastSimple' : 'broke',   'pastParticiple' : 'broken',  'meaning' : 'quebrar, finalizar/interromper'},
 {'idverb' : 10,	'verb' : 'breed',  'pastSimple' : 'bred',	   'pastParticiple' : 'bred',    'meaning' : 'procriar, causar algo ruim a acontecer'},
-{'idverb' : 11,	'verb' : 'bring',  'pastSimple' : 'brought',  'pastParticiple' : 'brought', 'meaning' : 'trazer'},
+{'idverb' : 11,	'verb' : 'bring',  'pastSimple' : 'brought', 'pastParticiple' : 'brought', 'meaning' : 'trazer'},
 {'idverb' : 12,	'verb' : 'buy',	   'pastSimple' : 'bought',	 'pastParticiple' : 'bought',  'meaning' : 'comprar'},
 {'idverb' : 13,	'verb' : 'catch',  'pastSimple' : 'caught',	 'pastParticiple' : 'caught',  'meaning' : 'capturar, pegar'},
 {'idverb' : 14,	'verb' : 'choose', 'pastSimple' : 'chose',	 'pastParticiple' : 'chosen',  'meaning' : 'escolher'},
