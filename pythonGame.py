@@ -1,5 +1,7 @@
 import random as rd
 from verbs import verbs
+import numpy as np
+from adjectives import adjectives as adjlist
 
 class bcolors:
     HEADER = '\033[95m'
@@ -23,8 +25,6 @@ def verbsConjugation():
         a = rd.randint(0, len(verbs) - 1)
       
         verbDictionary = verbs[a]
-        columns = ['base form', 'past simple', 'past participle', 'meaning']
-        columnNumber = rd.randint(0, 3)
 
         verb = verbDictionary['verb']
         pastSimple = verbDictionary['pastSimple']
@@ -135,4 +135,37 @@ def verbsConjugation():
             print(f'{bcolors.OKCYAN}CONGRATULATIONS! YOU WON THE GAME!')
 
 
+def adjectives():
+
+    options = ['a)', 'b)', 'c)', 'd)', 'e)']
+    answerLetter = rd.choice(options)
+    answerNumber = options.index(answerLetter)
+
+    a = rd.randint(0, len(adjlist) - 1)
+    adjectiveDictionary = adjlist[a]
+
+    adjective = adjectiveDictionary['adjective']
+    meaning = adjectiveDictionary['meaning']
+
+    alternatives = []
+
+    i = 0
+
+    while i < 5:
+
+        random = rd.randint(0, len(adjlist) - 1)
+        if random != a and random not in alternatives:
+            alternatives.append(random)        
+            i += 1
+
+    alternatives[answerNumber] = a
+
+    for i in range(len(options)):
+
+        index = alternatives[i]
+        adj = adjlist[index]
+        print(options[i], adj['adjective'])
+
+
 verbsConjugation()
+# adjectives()
