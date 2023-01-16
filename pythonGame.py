@@ -133,39 +133,71 @@ def verbsConjugation():
 
         if i == 50:
             print(f'{bcolors.OKCYAN}CONGRATULATIONS! YOU WON THE GAME!')
+            break
 
 
 def adjectives():
 
-    options = ['a)', 'b)', 'c)', 'd)', 'e)']
-    answerLetter = rd.choice(options)
-    answerNumber = options.index(answerLetter)
+    pontuaction = 0
 
-    a = rd.randint(0, len(adjlist) - 1)
-    adjectiveDictionary = adjlist[a]
+    while True:
 
-    adjective = adjectiveDictionary['adjective']
-    meaning = adjectiveDictionary['meaning']
+        options = ['a', 'b', 'c', 'd', 'e']
+        answerLetter = rd.choice(options)
+        answerNumber = options.index(answerLetter)
 
-    alternatives = []
+        a = rd.randint(0, len(adjlist) - 1)
+        adjectiveDictionary = adjlist[a]
 
-    i = 0
+        adjective = adjectiveDictionary['adjective']
+        meaning = adjectiveDictionary['meaning']
+        example = adjectiveDictionary['example']
 
-    while i < 5:
+        adjectivesindex = []
 
-        random = rd.randint(0, len(adjlist) - 1)
-        if random != a and random not in alternatives:
-            alternatives.append(random)        
-            i += 1
+        print(f'{bcolors.OKBLUE}='*20)
+        print(f'{bcolors.ENDC}Select the adjective which means {bcolors.UNDERLINE}\'{meaning}\'{bcolors.ENDC}:')
 
-    alternatives[answerNumber] = a
+        i = 0
 
-    for i in range(len(options)):
+        while i < 5:
 
-        index = alternatives[i]
-        adj = adjlist[index]
-        print(options[i], adj['adjective'])
+            random = rd.randint(0, len(adjlist) - 1)
+            if random != a and random not in adjectivesindex:
+                adjectivesindex.append(random)        
+                i += 1
 
+        adjectivesindex[answerNumber] = a
 
-verbsConjugation()
+        for i in range(len(options)):
+
+            index = adjectivesindex[i]
+            adj = adjlist[index]
+            print(options[i] + ')', adj['adjective'])
+
+        while True:
+
+            answer = input('answer: ')
+
+            if answer not in options:
+                pass    
+            elif options.index(answer) == answerNumber:
+                print(f'{bcolors.OKGREEN}RIGHT!')
+                pontuaction += 1
+                break
+            else:
+                print(f'{bcolors.FAIL}WRONG!')
+                print(f'{bcolors.ENDC}The adjective is {adjective}')
+                pontuaction = 0
+                break
+        
+        print(f'{bcolors.ENDC}EXAMPLE: {bcolors.WARNING}{example}')
+    
+        print(f'{bcolors.ENDC}|'+f'{bcolors.OKGREEN}#'*pontuaction+f'{bcolors.ENDC}#'*(50-pontuaction)+'|')
+
+        if pontuaction == 50:
+            print(f'{bcolors.OKCYAN}CONGRATULATIONS! YOU WON THE GAME!')
+            break
+
+# verbsConjugation()
 # adjectives()
