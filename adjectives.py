@@ -19,6 +19,8 @@ adjectives = [
 {'adjective' : 'bloody',      'meaning' : 'used to express anger or to emphasize what you are saying in a slightly rude way / also blood stuff', 'example' : 'Life would be bloody boring if nothing ever went wrong'},
 {'adjective' : 'brainy',      'meaning' : 'intelligent, clever', 'example' : 'Sarah was beautiful and brainy'},
 {'adjective' : 'bright',      'meaning' : 'full of light, or shining', 'example' : 'The rooms were bright and airy'},
+{'adjective' : 'bumbling',    'meaning' : 'confused and showing no skill', 'example' : 'I\'ve never seen such bumbling incompetence!'},
+{'adjective' : 'brisk',       'meaning' : 'quick, energetic, and active', 'example' : 'He set a brisk pace and we struggled to keep up'},
 {'adjective' : 'cheerful',    'meaning' : 'happy and positive', 'example' : 'You\'re in a cheerful mood this morning'},
 {'adjective' : 'clever',      'meaning' : 'having or showing the ability to learn and understand things quickly and easily', 'example' : 'Judy has never been very clever, but she tries hard'},
 {'adjective' : 'cloudy',      'meaning' : 'with clouds or not transparent', 'example' : 'The beer was cloudy and dark'},
@@ -34,4 +36,9 @@ adjectives = [
 {'adjective' : 'drab',        'meaning' : 'plain and not interesting, or not bright in appearance', 'example' : 'He found London disagreeable, with its thick fog, cold drizzle, and drab food'},
 {'adjective' : 'elated',      'meaning' : 'extremely happy and excited, often because something has happened or been achieved', 'example' : 'The prince was reported to be elated at/by the birth of his daughter'},
 {'adjective' : 'dreary',      'meaning' : 'boring and making you feel unhappy', 'example' : 'She had spent another dreary day in the office'},
+{'adjective' : 'narrow',      'meaning' : 'having a small distance from one side to the other, especially in comparison with the length', 'example' : 'The little village has very narrow streets'},
+{'adjective' : 'damp',        'meaning' : 'slightly wet, especially in a way that is not pleasant or comfortable', 'example' : 'The grass is still damp'},
+{'adjective' : 'grating',     'meaning' : 'a grating sound is unpleasant and annoying', 'example' : 'I turned on the car’s engine, and there was that familiar grating sound'},
+{'adjective' : 'enchanting',  'meaning' : 'very pleasant or charming', 'example' : 'Belgium is an enchanting country'},
+{'adjective' : 'envious',     'meaning' : 'wanting something another person has', 'example' : 'I\'m envious of people that have those big boats'},
 ]
